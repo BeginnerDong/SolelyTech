@@ -1,10 +1,10 @@
 <template>
 	<view>
 		
-		<view class=" mglr4 pdtb15">
+		<view class="mx-2 py-3">
 			<textarea v-model="submitData.content" placeholder="请输入缘由" placeholder-class="placeholder" />
 		</view>
-		<view class="f5H10"></view>
+		<view class="f5Bj-H20"></view>
 		
 		<view class="submitbtn" style="padding: 150rpx 0 60rpx 0;">
 			<view class="btn"  @click="Utils.stopMultiClick(submit)">提交</view>
@@ -95,6 +95,6 @@
 	@import "../../assets/style/editInfor.css";
 	page{padding-bottom: 60rpx;}
 	
-	textarea{border: 0;height: 400rpx;}
+	textarea{border: 0;height: 400rpx;font-size: 26rpx;}
 	
 </style>

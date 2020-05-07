@@ -2,36 +2,36 @@
 	<view>
 		
 		<view class="editLine">
-			<view class="item flex">
-				<view class="ll flex"><image class="icon" src="../../static/images/projectl-icon0.png" mode=""></image>签订时间：</view>
+			<view class="item d-flex a-center">
+				<view class="ll d-flex a-center"><image class="icon" src="../../static/images/projectl-icon0.png" mode=""></image>签订时间：</view>
 				<view class="rr">{{Utils.timeto(mainData.sign_time,'ymd')}}</view>
 			</view>
-			<view class="item flex">
-				<view class="ll flex"><image class="icon" src="../../static/images/projectl-icon1.png" mode=""></image>合同编号：</view>
+			<view class="item d-flex a-center">
+				<view class="ll d-flex a-center"><image class="icon" src="../../static/images/projectl-icon1.png" mode=""></image>合同编号：</view>
 				<view class="rr">缺少字段</view>
 			</view>
-			<view class="item flex">
-				<view class="ll flex"><image class="icon" src="../../static/images/projectl-icon2.png" mode=""></image>项目名称：</view>
+			<view class="item d-flex a-center">
+				<view class="ll d-flex a-center"><image class="icon" src="../../static/images/projectl-icon2.png" mode=""></image>项目名称：</view>
 				<view class="rr">{{mainData.name}}</view>
 			</view>
-			<view class="item flex">
-				<view class="ll flex"><image class="icon" src="../../static/images/projectl-icon3.png" mode=""></image>客户名称：</view>
+			<view class="item d-flex a-center">
+				<view class="ll d-flex a-center"><image class="icon" src="../../static/images/projectl-icon3.png" mode=""></image>客户名称：</view>
 				<view class="rr">{{mainData.client}}</view>
 			</view>
-			<view class="item flex">
-				<view class="ll flex"><image class="icon" src="../../static/images/projectl-icon4.png" mode=""></image>手机号码：</view>
+			<view class="item d-flex a-center">
+				<view class="ll d-flex a-center"><image class="icon" src="../../static/images/projectl-icon4.png" mode=""></image>手机号码：</view>
 				<view class="rr">{{mainData.phone}}</view>
 			</view>
-			<view class="item flex">
-				<view class="ll flex"><image class="icon" src="../../static/images/projectl-icon5.png" mode=""></image>合同金额：</view>
+			<view class="item d-flex a-center">
+				<view class="ll d-flex a-center"><image class="icon" src="../../static/images/projectl-icon5.png" mode=""></image>合同金额：</view>
 				<view class="rr">{{mainData.total_amount}}</view>
 			</view>
-			<view class="item flex">
-				<view class="ll flex"><image class="icon" src="../../static/images/projectl-icon6.png" mode=""></image>支付金额：</view>
+			<view class="item d-flex a-center">
+				<view class="ll d-flex a-center"><image class="icon" src="../../static/images/projectl-icon6.png" mode=""></image>支付金额：</view>
 				<view class="rr">{{mainData.payment.payment}}</view>
 			</view>
-			<view class="item flex">
-				<view class="ll flex"><image class="icon" src="../../static/images/projectl-icon7.png" mode=""></image>项目状态：</view>
+			<view class="item d-flex a-center">
+				<view class="ll d-flex a-center"><image class="icon" src="../../static/images/projectl-icon7.png" mode=""></image>项目状态：</view>
 				<view class="rr" v-if="mainData.sign_status==0">立项中</view>
 				<view class="rr" v-if="mainData.sign_status==1">开发中</view>
 				<view class="rr" v-if="mainData.sign_status==2">交付测试</view>
@@ -41,9 +41,9 @@
 			</view>
 			<view class="item">
 				<view>
-					<view class="ll flex"><image class="icon" src="../../static/images/projectl-icon8.png" mode=""></image>项目图片：</view>
+					<view class="ll d-flex a-center"><image class="icon" src="../../static/images/projectl-icon8.png" mode=""></image>项目图片：</view>
 				</view>
-				<view class="mgt10">
+				<view class="mt-2">
 					<scroll-view class="imgList" scroll-x>
 						<view class="tt" v-for="(item,index) in mainData.mainImg" :key="index"  
 						@click="imglisShow"><image :src="item.url" mode=""></image></view>
@@ -52,15 +52,15 @@
 			</view>
 			<view class="item">
 				<view>
-					<view class="ll flex"><image class="icon" src="../../static/images/projectl-icon9.png" mode=""></image>项目文档：</view>
+					<view class="ll d-flex a-center"><image class="icon" src="../../static/images/projectl-icon9.png" mode=""></image>项目文档：</view>
 				</view>
 				<view class="">
-					<view class="textFile flexRowBetween" v-for="(item,index) in mainData.file" :key="index">
-						<view class="Ltit flex">
-							<view class="dian mgr10"></view>
+					<view class="textFile d-flex a-center j-sb" v-for="(item,index) in mainData.file" :key="index">
+						<view class="Ltit d-flex a-center">
+							<view class="dian mr-2"></view>
 							<view class="text avoidOverflow">{{item.title}}</view>
 						</view>
-						<view class="Rbtn flexEnd">
+						<view class="Rbtn d-flex a-center j-end">
 							<image class="loadIcon" src="../../static/images/projectl-icon10.png" mode=""></image>
 							<view>下载</view>
 						</view>
@@ -72,7 +72,7 @@
 		<!-- 图片弹框 -->
 		<view class="black-bj" v-show="is_show"></view>
 		
-		<view class="banner-box pdlr4" v-show="is_imglisShow">
+		<view class="banner-box mx-2" v-show="is_imglisShow">
 			<view class="banner">
 				<swiper class="swiper-box" indicator-dots="true"  interval="3000" duration="1000" indicator-active-color="#39c9d8">
 					<block v-for="(item,index) in mainData.mainImg" :key="index">

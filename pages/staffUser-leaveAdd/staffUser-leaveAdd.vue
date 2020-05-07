@@ -1,18 +1,18 @@
 <template>
 	<view>
 
-		<view class="editLine pdlr4">
-			<view class="item flexRowBetween">
-				<view class="ll"><span class="red mgr5">*</span>请假事由</view>
+		<view class="editLine px-2">
+			<view class="item d-flex a-center j-sb">
+				<view class="ll"><span class="red mr-10">*</span>请假事由</view>
 				<view class="rr">
 					<textarea class="f5bj" v-model="submitData.content" placeholder="请填写" placeholder-class="placeholder" />
-					</view>
+				</view>
 			</view>
-			<view class="item flexRowBetween">
-				<view class="ll"><span class="red mgr5">*</span>请假类型</view>
+			<view class="item d-flex a-center j-sb">
+				<view class="ll"><span class="red mr-10">*</span>请假类型</view>
 				<view class="rr flex">
 					<picker @change="seltResult" :value="index" :range="array">
-						<view class="seltStyle flexRowBetween">
+						<view class="seltStyle d-flex a-center j-sb">
 							<view class="">{{array[index]}}</view>
 							<view style="width: 20rpx;height: 14rpx;"><image src="../../static/images/leave-icon.png" mode=""></image></view>
 						</view>
@@ -20,11 +20,11 @@
 					<!-- <input type="text" maxlength="11" value="" placeholder="请输入" placeholder-class="placeholder" /> -->
 				</view>
 			</view>
-			<view class="item flexRowBetween">
-				<view class="ll"><span class="red mgr5">*</span>起止时间</view>
-				<view class="rr flexRowBetween" style="flex-wrap: wrap;">
+			<view class="item d-flex a-center j-sb">
+				<view class="ll"><span class="red mr-10">*</span>起止时间</view>
+				<view class="rr d-flex a-center j-sb" style="flex-wrap: wrap;">
 					<view class="seltTime">
-						<view class="flexRowBetween">
+						<view class="d-flex a-center j-sb">
 							<view>
 								<picker mode="date"  @change="changeStartDate">
 									<view>{{startDate!=''?startDate:'请选择'}}</view>
@@ -34,7 +34,7 @@
 						</view>
 					</view>
 					<view class="seltTime">
-						<view class="flexRowBetween">
+						<view class="d-flex a-center j-sb">
 							<view>
 								<picker mode="time"  @change="changeStartTime">
 									<view>{{startTime!=''?startTime:'请选择'}}</view>
@@ -44,7 +44,7 @@
 						</view>
 					</view>
 					<view class="seltTime">
-						<view class="flexRowBetween">
+						<view class="d-flex a-center j-sb">
 							<view>
 								<picker mode="date"  @change="changeEndDate">
 									<view>{{endDate!=''?endDate:'请选择'}}</view>
@@ -54,7 +54,7 @@
 						</view>
 					</view>
 					<view class="seltTime">
-						<view class="flexRowBetween">
+						<view class="d-flex a-center j-sb">
 							<view>
 								<picker mode="time"  @change="changeEndTime">
 									<view>{{endTime!=''?endTime:'请选择'}}</view>

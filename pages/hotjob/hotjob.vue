@@ -6,14 +6,14 @@
 			<view class="jobList">
 				<view class="item" v-for="(item,index) in mainData" :key="index" :data-id="item.id"
 				 @click="Router.navigateTo({route:{path:'/pages/hotjobDetail/hotjobDetail?id='+$event.currentTarget.dataset.id}})">
-					<view class="flexRowBetween">
-						<view class="tit fs13">{{item.title}}</view>
-						<view class="pubColor">{{item.small_title}}</view>
+					<view class="d-flex j-sb a-center">
+						<view class="tit font-26">{{item.title}}</view>
+						<view class="main-text-color">{{item.small_title}}</view>
 					</view>
-					<view class="flex lable color9">
+					<view class="d-flex a-center lable color9">
 						<view class="tt">{{item.description}}</view>
 					</view>
-					<view class="flex mgt15 color9 fs12">
+					<view class="d-flex a-center mt-3 font-24 color9">
 						<view class="photo"><image src="../../static/images/positionl-img.png" mode=""></image></view>
 						<view>纯粹科技</view>
 					</view>

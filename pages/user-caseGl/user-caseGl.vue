@@ -1,27 +1,27 @@
 <template>
 	<view>
 		
-		<view class="caseGl mglr4">
-			<view class="item flexRowBetween" v-for="(item,index) in mainData" :key="index" :data-id="item.id"
+		<view class="caseGl mx-2">
+			<view class="item d-flex a-center j-sb" v-for="(item,index) in mainData" :key="index" :data-id="item.id"
 			 @click="Router.navigateTo({route:{path:'/pages/user-caseGlDetail/user-caseGlDetail?id='+$event.currentTarget.dataset.id}})">
 				<view class="infor">
-					<view class="fs12 color9">项目编号：{{item.project_no}}</view>
-					<view class="flex row">
+					<view class="font-24 color9">项目编号：{{item.project_no}}</view>
+					<view class="d-flex a-center row">
 						<view class="icon"><image src="../../static/images/projectl-icon1.png" mode=""></image></view>
-						<view><span class="mgr10 fs13 color6">合同编号：</span>缺少字段中</view>
+						<view><span class="mr-2 font-26 color6">合同编号：</span>缺少字段中</view>
 					</view>
-					<view class="flex row">
+					<view class="d-flex a-center row">
 						<view class="icon"><image src="../../static/images/projectl-icon2.png" mode=""></image></view>
-						<view><span class="mgr10 fs13 color6">项目名称：</span>{{item.name}}</view>
+						<view><span class="mr-2 font-26 color6">项目名称：</span>{{item.name}}</view>
 					</view>
-					<view class="flex row">
+					<view class="d-flex a-center row">
 						<view class="icon"><image src="../../static/images/projectl-icon7.png" mode=""></image></view>
-						<view v-if="item.sign_status==0"><span class="mgr10 fs13 color6">项目状态：</span>立项中</view>
-						<view v-if="item.sign_status==1"><span class="mgr10 fs13 color6">项目状态：</span>开发中</view>
-						<view v-if="item.sign_status==2"><span class="mgr10 fs13 color6">项目状态：</span>交付测试</view>
-						<view v-if="item.sign_status==3"><span class="mgr10 fs13 color6">项目状态：</span>已交接</view>
-						<view v-if="item.sign_status==4"><span class="mgr10 fs13 color6">项目状态：</span>已完结</view>
-						<view v-if="item.sign_status==5"><span class="mgr10 fs13 color6">项目状态：</span>烂尾</view>
+						<view v-if="item.sign_status==0"><span class="mr-2 font-26 color6">项目状态：</span>立项中</view>
+						<view v-if="item.sign_status==1"><span class="mr-2 font-26 color6">项目状态：</span>开发中</view>
+						<view v-if="item.sign_status==2"><span class="mr-2 font-26 color6">项目状态：</span>交付测试</view>
+						<view v-if="item.sign_status==3"><span class="mr-2 font-26 color6">项目状态：</span>已交接</view>
+						<view v-if="item.sign_status==4"><span class="mr-2 font-26 color6">项目状态：</span>已完结</view>
+						<view v-if="item.sign_status==5"><span class="mr-2 font-26 color6">项目状态：</span>烂尾</view>
 					</view>
 				</view>
 				<view class="arrowR"><image src="../../static/images/0-icon.png" mode=""></image></view>

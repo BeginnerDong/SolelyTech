@@ -1,16 +1,16 @@
 <template>
 	<view>
 		
-		<view class="pdlr4 pdt20 pdb20">
-			<view class="fs20 mgb15">{{mainData.title}}</view>
-			<view class="flex fs13"><span class="red">{{mainData.small_title}}</span>{{item.description}}</view>
+		<view class="px-2 py-4">
+			<view class="font-40 mb-3 mgb15">{{mainData.title}}</view>
+			<view class="d-flex a-center font-26"><span class="red">{{mainData.small_title}}</span>{{item.description}}</view>
 		</view>
 		<view class="f5H10"></view>
 		
-		<view class="pdlr4">
-			<view class="fs16 ftw mgb10 pdt20">职位描述</view>
-			<!-- <view class="flex">
-				<view class="jobLable fs13">会计助理</view>
+		<view class="px-2">
+			<view class="font-32 font-weight mb-2 pt-4">职位描述</view>
+			<!-- <view class="d-flex a-center">
+				<view class="jobLable font-26">会计助理</view>
 			</view> -->
 			<view class="content ql-editor" style="padding:0;"
 			v-html="mainData.content">

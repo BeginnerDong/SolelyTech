@@ -2,29 +2,29 @@
 	<view>
 		
 		<view class="resume">
-			<view class="item flex" v-for="(item,index) in resumeData" :key="index" @click="Router.navigateTo({route:{path:'/pages/staffUser-resumeDetail/staffUser-resumeDetail'}})">
+			<view class="item d-flex a-center" v-for="(item,index) in resumeData" :key="index" @click="Router.navigateTo({route:{path:'/pages/staffUser-resumeDetail/staffUser-resumeDetail'}})">
 				<view class="photo"><image src="../../static/images/resume-managementl-img.png" mode=""></image></view>
 				<view class="infor">
 					<view class="tit">林晓梅</view>
-					<view class="flex pdtb5">
-						<view class="flex lable">
+					<view class="d-flex a-center py-1">
+						<view class="d-flex a-center lable">
 							<view class="icon"><image src="../../static/images/resume-managementl-icon.png" mode=""></image></view>
 							<view>西安</view>
 						</view>
-						<view class="flex lable">
+						<view class="d-flex a-center lable">
 							<view class="icon"><image src="../../static/images/resume-managementl-icon2.png" mode=""></image></view>
 							<view>女</view>
 						</view>
-						<view class="flex lable">
+						<view class="d-flex a-center lable">
 							<view class="icon"><image src="../../static/images/resume-managementl-icon3.png" mode=""></image></view>
 							<view>大专</view>
 						</view>
-						<view class="flex lable">
+						<view class="d-flex a-center lable">
 							<view class="icon"><image src="../../static/images/resume-managementl-icon4.png" mode=""></image></view>
 							<view>1-3年</view>
 						</view>
 					</view>
-					<view class="fs12 color6">应聘职位：网络推广</view>
+					<view class="font-24 color6">应聘职位：网络推广</view>
 				</view>
 			</view>
 		</view>

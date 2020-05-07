@@ -1,56 +1,56 @@
 <template>
 	<view>
-		<view class="userHead pr">
+		<view class="userHead position-relative">
 			<view class="headbj"><image src="../../static/images/about-img.png" mode=""></image></view>
-			<view class="quitBtn" style="border: 1px solid #777777;font-size: 25rpx;font-weight: bold;border-radius: 30rpx;width: 50px;line-height: 25px;text-align: center;" @click="loginOff">退出</view>
+			<view class="quitBtn font-26 font-weight" style="border: 1px solid #777777;font-size: 25rpx;font-weight: bold;border-radius: 30rpx;width: 50px;line-height: 25px;text-align: center;" @click="loginOff">退出</view>
 			
 			<view class="quitBtn" style="border: 1px solid #777777;border-radius: 30rpx;width: 50px;line-height: 25px;text-align: center;left:25rpx;" @click="Utils.stopMultiClick(scan)" v-if="routineData.length<2">{{routineData.length>0?'签退':'签到'}}</view>
-			<view class="infor flexColumn">
+			<view class="infor d-flex flex-column a-center">
 				<view class="photo">
 					<image :src="mainData.mainImg&&mainData.mainImg[0]?mainData.mainImg[0].url:''" mode=""></image>
 				</view>
-				<view class="fs13 mgt10">{{mainData.name}}</view>
+				<view class="font-26 mt-2">{{mainData.name}}</view>
 			</view>
 		</view>
 		
-		<view class="twoBox flex fs13 color3">
-			<view class="item flexCenter" @click="showToast">
+		<view class="twoBox d-flex a-center font-26 color3">
+			<view class="item d-flex a-center j-center" @click="showToast">
 				<view>
 					<view class="icon"><image src="../../static/images/employeesl-icon.png" mode=""></image></view>
 					<view>简历管理</view>
 				</view>
 			</view>
-			<view class="item flexCenter" @click="Router.navigateTo({route:{path:'/pages/staffUser-goOut/staffUser-goOut'}})">
+			<view class="item d-flex a-center j-center" @click="Router.navigateTo({route:{path:'/pages/staffUser-goOut/staffUser-goOut'}})">
 				<view>
 					<view class="icon"><image src="../../static/images/employeesl-icon1.png" mode=""></image></view>
 					<view>外出登记</view>
 				</view>
 			</view>
-			<view class="item flexCenter" @click="showToast">
+			<view class="item d-flex a-center j-center" @click="showToast">
 				<view>
 					<view class="icon"><image src="../../static/images/employeesl-icon2.png" mode=""></image></view>
 					<view>项目管理</view>
 				</view>
 			</view>
-			<view class="item flexCenter" @click="showToast">
+			<view class="item d-flex a-center j-center" @click="showToast">
 				<view>
 					<view class="icon"><image src="../../static/images/employeesl-icon3.png" mode=""></image></view>
 					<view>推广客户</view>
 				</view>
 			</view>
-			<view class="item flexCenter" @click="Router.navigateTo({route:{path:'/pages/staffUser-salary/staffUser-salary'}})">
+			<view class="item d-flex a-center j-center" @click="Router.navigateTo({route:{path:'/pages/staffUser-salary/staffUser-salary'}})">
 				<view>
 					<view class="icon"><image src="../../static/images/employeesl-icon4.png" mode=""></image></view>
 					<view>我的薪资</view>
 				</view>
 			</view>
-			<view class="item flexCenter" @click="Router.navigateTo({route:{path:'/pages/staffUser-system/staffUser-system'}})">
+			<view class="item d-flex a-center j-center" @click="Router.navigateTo({route:{path:'/pages/staffUser-system/staffUser-system'}})">
 				<view>
 					<view class="icon"><image src="../../static/images/employeesl-icon5.png" mode=""></image></view>
 					<view>公司规定</view>
 				</view>
 			</view>
-			<view class="item flexCenter" @click="Router.navigateTo({route:{path:'/pages/staffUser-leave/staffUser-leave'}})">
+			<view class="item d-flex a-center j-center" @click="Router.navigateTo({route:{path:'/pages/staffUser-leave/staffUser-leave'}})">
 				<view>
 					<view class="icon"><image src="../../static/images/employeesl-icon6.png" mode=""></image></view>
 					<view>请假</view>
@@ -100,17 +100,13 @@
 			
 			getLocation(){
 				const self = this;
-				console.log(23232)
 				uni.getLocation({
 				    type: 'wgs84',
 				    success: function (res) {
 						self.latitude = res.latitude;
 						self.longitude = res.longitude;
 						self.routineAdd()
-				    },
-					fail(res) {
-						console.log(res)
-					}
+				    }
 				});
 				self.$Utils.finishFunc('getLocation');
 			},

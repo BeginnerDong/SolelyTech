@@ -8,11 +8,11 @@
 				</map>
 			</view>
 			
-			<view class="camera flexCenter">
-				<view class="flexColumn">
-					<view class="btn mgb10" @click="upLoadImg('mainImg')" v-if="submitData.mainImg.length==0"><image src="../../static/images/to-go-outl-icon1.png" mode=""></image></view>
+			<view class="camera d-flex a-center j-center">
+				<view class="d-flex a-center flex-column ">
+					<view class="btn mb-2" @click="upLoadImg('mainImg')" v-if="submitData.mainImg.length==0"><image src="../../static/images/to-go-outl-icon1.png" mode=""></image></view>
 					
-					<view class="btn mgb10"  v-if="submitData.mainImg.length>0"><image :src="submitData.mainImg&&submitData.mainImg[0]?submitData.mainImg[0].url:''" mode=""></image></view>
+					<view class="btn mb-2"  v-if="submitData.mainImg.length>0"><image :src="submitData.mainImg&&submitData.mainImg[0]?submitData.mainImg[0].url:''" mode=""></image></view>
 					<view>拍照</view>
 				</view>
 			</view>

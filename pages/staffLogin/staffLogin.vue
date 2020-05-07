@@ -1,22 +1,22 @@
 <template>
 	<view v-if="showAll">
 		
-		<view class="flexColumn" style="padding-top: 100rpx;padding-bottom: 80rpx;">
+		<view class="d-flex flex-column a-center" style="padding-top: 100rpx;padding-bottom: 80rpx;">
 			<view class="photo" style="overflow: hidden"><open-data type="userAvatarUrl"></open-data></view>
-			<view class="fs15 ftw mgt10"><open-data type="userNickName"></open-data></view>
+			<view class="font-30 font-weight mt-2"><open-data type="userNickName"></open-data></view>
 		</view>
 		<!-- <view class="loginBj pr">
 			<image src="../../static/images/the-login-img.png" mode=""></image>
 		</view> -->
 		
 		<view class="loginCont">
-			<view class="item flex mgb20">
+			<view class="item d-flex a-center mb-4">
 				<view class="icon"><image src="../../static/images/the-loginl-icon.png" mode=""></image></view>
 				<view class="input">
 					<input type="text" v-model="submitData.login_name" placeholder="请输入登录名" placeholder-class="placeholder">
 				</view>
 			</view>
-			<view class="item flex mgb20">
+			<view class="item d-flex a-center mb-4">
 				<view class="icon"><image src="../../static/images/the-loginl-icon1.png" mode=""></image></view>
 				<view class="input">
 					<input type="password" v-model="submitData.password" placeholder="请输入您的密码" placeholder-class="placeholder">

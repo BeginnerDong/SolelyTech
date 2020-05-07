@@ -1,29 +1,29 @@
 <template>
 	<view>
 		
-		<view class="system flexRowBetween mglr4">
-			<view class="item flex" v-for="(item,index) in mainData" :data-id="item.id"
+		<view class="system d-flex a-center j-sb mx-2">
+			<view class="item d-flex a-center" v-for="(item,index) in mainData" :data-id="item.id"
 			@click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail?id='+$event.currentTarget.dataset.id}})">
 				<view class="icon"><image :src="item.mainImg&&item.mainImg[0]?item.mainImg[0].url:''" mode=""></image></view>
 				<view class="tit">{{item.title}}</view>
 			</view>
-			<!-- <view class="item flex" @click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail'}})">
+			<!-- <view class="item d-flex a-center" @click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail'}})">
 				<view class="icon"><image src="../../static/images/provisionsl-icon1.png" mode=""></image></view>
 				<view class="tit">薪资制度</view>
 			</view>
-			<view class="item flex" @click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail'}})">
+			<view class="item d-flex a-center" @click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail'}})">
 				<view class="icon"><image src="../../static/images/provisionsl-icon2.png" mode=""></image></view>
 				<view class="tit">年假制度</view>
 			</view>
-			<view class="item flex" @click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail'}})">
+			<view class="item d-flex a-center" @click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail'}})">
 				<view class="icon"><image src="../../static/images/provisionsl-icon3.png" mode=""></image></view>
 				<view class="tit">日志制度</view>
 			</view>
-			<view class="item flex" @click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail'}})">
+			<view class="item d-flex a-center" @click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail'}})">
 				<view class="icon"><image src="../../static/images/provisionsl-icon4.png" mode=""></image></view>
 				<view class="tit">请假制度</view>
 			</view>
-			<view class="item flex" @click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail'}})">
+			<view class="item d-flex a-center" @click="Router.navigateTo({route:{path:'/pages/staffUser-systemDetail/staffUser-systemDetail'}})">
 				<view class="icon"><image src="../../static/images/provisionsl-icon5.png" mode=""></image></view>
 				<view class="tit">迟到制度</view>
 			</view> -->

@@ -5,8 +5,8 @@
 			<image :src="mainData.bannerImg&&mainData.bannerImg[0]?mainData.bannerImg[0].url:''" mode=""></image>
 		</view>
 		
-		<view class="mglr4 pdt15 xqInfor" >
-			<view class="cont fs13">
+		<view class="mx-2 pt-3 xqInfor" >
+			<view class="cont font-26">
 				<view class="content ql-editor" style="padding:0;"
 				v-html="mainData.content">
 				</view>

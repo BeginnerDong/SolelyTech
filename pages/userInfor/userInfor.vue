@@ -1,33 +1,33 @@
 <template>
 	<view>
 		
-		<view class="myRowBetween pdlr4">
-			<view class="item flexRowBetween">
+		<view class="myRowBetween px-2">
+			<view class="item d-flex a-center j-sb">
 				<view class="ll">您的姓名</view>
 				<view class="rr">
 					<input type="text" v-model="submitData.name" placeholder="请输入" placeholder-class="placeholder" />
 				</view>
 			</view>
-			<view class="item flexRowBetween">
+			<view class="item d-flex a-center j-sb">
 				<view class="ll">联系电话</view>
 				<view class="rr">
 					<input type="number" maxlength="11" v-model="submitData.phone" placeholder="请输入" placeholder-class="placeholder" />
 				</view>
 			</view>
-			<view class="item flexRowBetween">
+			<view class="item d-flex a-center j-sb">
 				<view class="ll">验证码</view>
-				<view class="rr flexEnd">
+				<view class="rr d-flex a-center j-end">
 					<view style="width: 50%;"><input type="text" value="" placeholder="请输入" placeholder-class="placeholder" /></view>
-					<view class="pubColor mgl15">获取验证码</view>
+					<view class="main-text-color ml-3 mt-1">获取验证码</view>
 				</view>
 			</view>
-			<!-- <view class="item flexRowBetween">
+			<!-- <view class="item d-flex a-center j-sb">
 				<view class="ll">地址</view>
 				<view class="rr">
 					<input type="text" maxlength="11" value="" placeholder="请输入" placeholder-class="placeholder" />
 				</view>
 			</view>
-			<view class="item flexRowBetween">
+			<view class="item d-flex a-center j-sb">
 				<view class="ll">公司名称</view>
 				<view class="rr">
 					<input type="text" maxlength="11" value="" placeholder="请输入" placeholder-class="placeholder" />

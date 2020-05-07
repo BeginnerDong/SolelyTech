@@ -1,12 +1,12 @@
 <template>
 	<view>
 		
-		<view class="flexCenter" style="padding-top: 136rpx;padding-bottom:160rpx;">
+		<view class="d-flex a-center j-center" style="padding-top: 136rpx;padding-bottom:160rpx;">
 			<view class="bigIcon"><image src="../../static/images/projectl-icon.png" mode=""></image></view>
 		</view>
 		
 		<view class="loginCont">
-			<view class="item flex mgb25">
+			<view class="item d-flex a-center mb-5">
 				<view class="icon"><image src="../../static/images/the-loginl-icon1.png" mode=""></image></view>
 				<view class="input">
 					<input type="password" maxlength="11" value="" placeholder="输入绑定手机号" placeholder-class="placeholder">

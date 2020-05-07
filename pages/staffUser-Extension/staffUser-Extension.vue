@@ -1,16 +1,16 @@
 <template>
 	<view>
 		
-		<view class="orderNav flex whiteBj pdtb5">
-			<view class="tt flexCenter">起始时间<image class="arrwB" src="../../static/images/to-promotel-icon.png" mode=""></image></view>
-			<view class="tt flexCenter">截止时间<image class="arrwB" src="../../static/images/to-promotel-icon.png" mode=""></image></view>
+		<view class="orderNav d-flex a-center bg-white py-3">
+			<view class="tt d-flex a-center j-center">起始时间<image class="arrwB" src="../../static/images/to-promotel-icon.png" mode=""></image></view>
+			<view class="tt d-flex a-center j-center">截止时间<image class="arrwB" src="../../static/images/to-promotel-icon.png" mode=""></image></view>
 		</view>
-		<view class="mglr4">
-			<view class="extension flex" v-for="(item,index) in extensionData" :key="index">
+		<view class="mx-2">
+			<view class="extension d-flex a-center" v-for="(item,index) in extensionData" :key="index">
 				<view class="photo"><image src="../../static/images/to-promotel-img.png" mode=""></image></view>
 				<view>
 					<view>涸鲋得水</view>
-					<view class="mgt5 color6 fs13">2020-04-15</view>
+					<view class="mt-1 font-26 color6">2020-04-15</view>
 				</view>
 			</view>
 		</view>

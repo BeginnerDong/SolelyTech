@@ -1,45 +1,45 @@
 <template>
 	<view>
-		<view class="userHead pr">
+		<view class="userHead position-relative">
 			<view class="headbj"><image src="../../static/images/about-img.png" mode=""></image></view>
-			<view class="infor flexColumn">
+			<view class="infor d-flex a-center flex-column">
 				<view class="photo">
 					<view style="width: 100%;height: 100%;border-radius: 50%;box-sizing: border-box;border: 1px solid #fff;">
 						<view  style="overflow: hidden;border-radius: 50%;width: 100%;height: 100%;"><open-data type="userAvatarUrl"></open-data></view>
 					</view>
 					<!-- <image src="../../static/images/about-img1.png" mode=""></image> -->
 				</view>
-				<view class="fs13 mgt10"><open-data type="userNickName"></open-data></view>
+				<view class="font-26 mt-2"><open-data type="userNickName"></open-data></view>
 			</view>
 		</view>
 		
-		<view class="twoBox flex fs13 color3">
-			<view class="item flexCenter" @click="Router.navigateTo({route:{path:'/pages/userInfor/userInfor'}})">
+		<view class="twoBox d-flex a-center font-26 color3">
+			<view class="item d-flex a-center j-center" @click="Router.navigateTo({route:{path:'/pages/userInfor/userInfor'}})">
 				<view>
 					<view class="icon"><image src="../../static/images/about-icon.png" mode=""></image></view>
 					<view>我的信息</view>
 				</view>
 				
 			</view>
-			<view class="item flexCenter" @click="Router.navigateTo({route:{path:'/pages/user-caseGl/user-caseGl'}})">
+			<view class="item d-flex a-center j-center" @click="Router.navigateTo({route:{path:'/pages/user-caseGl/user-caseGl'}})">
 				<view>
 					<view class="icon"><image src="../../static/images/about-icon1.png" mode=""></image></view>
 					<view>项目管理</view>
 				</view>
 			</view>
-			<view class="item flexCenter" @click="Router.navigateTo({route:{path:'/pages/user-myMessages/user-myMessages'}})">
+			<view class="item d-flex a-center j-center" @click="Router.navigateTo({route:{path:'/pages/user-myMessages/user-myMessages'}})">
 				<view>
 					<view class="icon"><image src="../../static/images/about-icon2.png" mode=""></image></view>
 					<view>我的留言</view>
 				</view>
 			</view>
-			<view class="item flexCenter" @click="login()">
+			<view class="item d-flex a-center j-center" @click="login()">
 				<view>
 					<view class="icon"><image src="../../static/images/about-icon3.png" mode=""></image></view>
 					<view>员工登录</view>
 				</view>
 			</view>
-			<view class="item flexCenter" @click="Router.navigateTo({route:{path:'/pages/sendResumes/sendResumes'}})">
+			<view class="item d-flex a-center j-center" @click="Router.navigateTo({route:{path:'/pages/sendResumes/sendResumes'}})">
 				<view>
 					<view class="icon"><image src="../../static/images/about-icon4.png" mode=""></image></view>
 					<view>投递简历</view>

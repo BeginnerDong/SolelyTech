@@ -1,8 +1,8 @@
 <template>
 	<view>
 		
-		<view class="pdlr4">
-			<view class="newsList fs14 flexRowBetween pdt15">
+		<view class="px-2">
+			<view class="newsList font-28 d-flex j-sb a-center pt-3">
 				<view class="item" v-for="(item,index) in mainData" :key="index" :data-id = "item.id"
 				@click="Router.navigateTo({route:{path:'/pages/newsDetail/newsDetail?id='+$event.currentTarget.dataset.id}})">
 					<view class="pic"><image :src="item.mainImg&&item.mainImg[0]?item.mainImg[0].url:''" mode=""></image></view>

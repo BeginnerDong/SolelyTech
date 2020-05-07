@@ -1,43 +1,43 @@
 <template>
 	<view>
 		
-		<view class="mglr4 pdtb15">
-			<view class="fs15 ftw">起始</view>
-			<view class="flex mgt10">
-				<view class="mgr25 fs13 color6">时间</view>
+		<view class="mx-2 py-3">
+			<view class="font-30 font-weight">起始</view>
+			<view class="d-flex a-center mt-20">
+				<view class="mr-5 font-26 color6">时间</view>
 				<view>{{mainData.start_time>0?Utils.timeto(mainData.start_time*1000,'ymd-hms'):'-------'}}</view>
 			</view>
-			<view class="flex mgt10">
-				<view class="mgr25 fs13 color6">缘由</view>
+			<view class="d-flex a-center mt-20">
+				<view class="mr-5 font-26 color6">缘由</view>
 				<view>{{mainData.content}}</view>
 			</view>
 		</view>
-		<view class="f5H5"></view>
-		<view class="mglr4 pdtb15">
-			<view class="fs15 ftw">到达</view>
-			<view class="flex mgt10">
-				<view class="mgr25 fs13 color6">时间</view>
+		<view class="f5Bj-H10"></view>
+		<view class="mx-2 py-3">
+			<view class="font-30 font-weight">到达</view>
+			<view class="d-flex a-center mt-20">
+				<view class="mr-5 font-26 color6">时间</view>
 				<view>{{mainData.arrive_time>0?Utils.timeto(mainData.arrive_time*1000,'ymd-hms'):'-------'}}</view>
 			</view>
-			<view class="flex picLis">
-				<view class="tt" v><image :src="mainData.mainImg&&mainData.mainImg[0]?mainData.mainImg[0].url:''" mode=""></image></view>
+			<view class="d-flex a-center picLis">
+				<view class="tt"><image :src="mainData.mainImg&&mainData.mainImg[0]?mainData.mainImg[0].url:''" mode=""></image></view>
 			
 			</view>
 		</view>
-		<view class="f5H5"></view>
-		<view class="mglr4 pdtb15">
-			<view class="fs15 ftw">返程</view>
-			<view class="flex mgt10">
-				<view class="mgr25 fs13 color6">时间</view>
+		<view class="f5Bj-H10"></view>
+		<view class="mx-2 py-3">
+			<view class="font-30 font-weight">返程</view>
+			<view class="d-flex a-center mt-20">
+				<view class="mr-5 font-26 color6">时间</view>
 				<view>{{mainData.back_time>0?Utils.timeto(mainData.back_time*1000,'ymd-hms'):'-------'}}</view>
 			</view>
 			
 		</view>
-		<view class="f5H5"></view>
-		<view class="mglr4 pdtb15">
-			<view class="fs15 ftw">结束</view>
-			<view class="flex mgt10">
-				<view class="mgr25 fs13 color6">时间</view>
+		<view class="f5Bj-H10"></view>
+		<view class="mx-2 py-3">
+			<view class="font-30 font-weight">结束</view>
+			<view class="d-flex a-center mt-20">
+				<view class="mr-5 font-26 color6">时间</view>
 				<view>{{mainData.end_time>0?Utils.timeto(mainData.end_time*1000,'ymd-hms'):'-------'}}</view>
 			</view>
 		</view>

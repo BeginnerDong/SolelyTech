@@ -1,9 +1,9 @@
 <template>
 	<view>
 
-		<view class="myRowBetween pdlr4">
-			<view class="item flexRowBetween">
-				<view class="ll flex">
+		<view class="myRowBetween px-2">
+			<view class="item d-flex a-center j-sb">
+				<view class="ll d-flex a-center">
 					<view class="icon">
 						<image src="../../static/images/resumel-icon.png" mode=""></image>
 					</view>
@@ -13,8 +13,8 @@
 					<input type="text" v-model="submitData.title" placeholder="请输入" placeholder-class="placeholder" />
 				</view>
 			</view>
-			<view class="item flexRowBetween">
-				<view class="ll flex">
+			<view class="item d-flex a-center j-sb">
+				<view class="ll d-flex a-center">
 					<view class="icon">
 						<image src="../../static/images/resumel-icon1.png" mode=""></image>
 					</view>
@@ -24,21 +24,21 @@
 					<input type="number" maxlength="11" v-model="submitData.phone" placeholder="请输入" placeholder-class="placeholder" />
 				</view>
 			</view>
-			<view class="item flexRowBetween">
-				<view class="ll flex">
+			<view class="item d-flex a-center j-sb">
+				<view class="ll d-flex a-center">
 					<view class="icon">
 						<image src="../../static/images/resumel-icon2.png" mode=""></image>
 					</view>
 					<view>性别</view>
 				</view>
 				<view class="rr flexEnd">
-					<view class="flex" @click="sexCurrChange('1')">
+					<view class="d-flex a-center" @click="sexCurrChange('1')">
 						<image class="seltIcon" :src="sexCurr==1?'../../static/images/resumel-icon12.png':'../../static/images/resumel-icon13.png'"
 						 mode="">
 
 						</image>男
 					</view>
-					<view class="flex" @click="sexCurrChange('2')" style="margin-left: 100rpx;">
+					<view class="d-flex a-center" @click="sexCurrChange('2')" style="margin-left: 100rpx;">
 						<image class="seltIcon" :src="sexCurr==2?'../../static/images/resumel-icon12.png':'../../static/images/resumel-icon13.png'"
 						 mode="">
 
@@ -46,22 +46,22 @@
 					</view>
 				</view>
 			</view>
-			<view class="item flexRowBetween">
-				<view class="ll flex">
+			<view class="item d-flex a-center j-sb">
+				<view class="ll d-flex a-center">
 					<view class="icon">
 						<image src="../../static/images/resumel-icon3.png" mode=""></image>
 					</view>
 					<view>投递来源</view>
 				</view>
 				<view class="rr flexEnd" style="flex-wrap: wrap;">
-					<view class="flex sourceSelt" @click="sourceChange(index)" v-for="(item,index) in sourceData" :key="index">
+					<view class="d-flex a-center sourceSelt" @click="sourceChange(index)" v-for="(item,index) in sourceData" :key="index">
 						<image class="seltIcon" :src="sourceCurr==index?'../../static/images/resumel-icon12.png':'../../static/images/resumel-icon13.png'"
 						 mode=""></image>{{item}}
 					</view>
 				</view>
 			</view>
-			<view class="item flexRowBetween">
-				<view class="ll flex">
+			<view class="item d-flex a-center j-sb">
+				<view class="ll d-flex a-center">
 					<view class="icon">
 						<image src="../../static/images/resumel-icon4.png" mode=""></image>
 					</view>
@@ -69,15 +69,15 @@
 				</view>
 				<view class="rr">
 					<picker mode="selector" :range="educationData" @change="educationChange">
-						<view class="flexEnd" :style="submitData.education==''?'color:#999':''">{{submitData.education!=''?submitData.education:'请选择'}}
+						<view class="d-flex a-center j-end" :style="submitData.education==''?'color:#999':''">{{submitData.education!=''?submitData.education:'请选择'}}
 							<image class="arrowR" src="../../static/images/0-icon.png" mode=""></image>
 						</view>
 					</picker>
 					<!-- <input type="text" value="" placeholder="请输入" placeholder-class="placeholder" /> -->
 				</view>
 			</view>
-			<view class="item flexRowBetween">
-				<view class="ll flex">
+			<view class="item d-flex a-center j-sb">
+				<view class="ll d-flex a-center">
 					<view class="icon">
 						<image src="../../static/images/resumel-icon5.png" mode=""></image>
 					</view>
@@ -87,8 +87,8 @@
 					<input type="text" v-model="submitData.college" placeholder="请输入" placeholder-class="placeholder" />
 				</view>
 			</view>
-			<view class="item flexRowBetween">
-				<view class="ll flex">
+			<view class="item d-flex a-center j-sb">
+				<view class="ll d-flex a-center">
 					<view class="icon">
 						<image src="../../static/images/resumel-icon6.png" mode=""></image>
 					</view>
@@ -96,22 +96,22 @@
 				</view>
 				<view class="rr">
 					<picker mode="selector" :range="positionData" range-key="title" @change="positionChange">
-						<view class="flexEnd" :style="!positionData[positionIndex].title?'color:#999':''">{{positionData[positionIndex]?positionData[positionIndex].title:'请选择'}}
+						<view class="d-flex a-center j-end" :style="!positionData[positionIndex].title?'color:#999':''">{{positionData[positionIndex]?positionData[positionIndex].title:'请选择'}}
 							<image class="arrowR" src="../../static/images/0-icon.png" mode=""></image>
 						</view>
 					</picker>
 				</view>
 			</view>
-			<view class="item flexRowBetween">
-				<view class="ll flex">
+			<view class="item d-flex a-center j-sb">
+				<view class="ll d-flex a-center">
 					<view class="icon">
 						<image src="../../static/images/resumel-icon7.png" mode=""></image>
 					</view>
 					<view>出生日期</view>
 				</view>
-				<view class="rr flexEnd">
+				<view class="rr d-flex a-center j-end">
 					<picker mode="date" @change="bindDateChange">
-						<view class="rr flexEnd">
+						<view class="rr d-flex a-center j-end">
 							<view class="dateInput" style="width: 90rpx;">
 								<input type="text" name="year" v-model="birth[0]" disabled="true" placeholder-class="placeholder" /></view>
 							<view>年</view>
@@ -126,26 +126,26 @@
 				</view>
 			</view>
 			<view class="item">
-				<view class="flex ll">
+				<view class="d-flex a-center ll">
 					<view class="icon">
 						<image src="../../static/images/resumel-icon8.png" mode=""></image>
 					</view>
 					<view>工作经历</view>
 				</view>
-				<view class="pdt10">
+				<view class="mt-2">
 					<textarea style="border-color: #d4d4d4;height: 300rpx;" v-model="submitData.content" placeholder="请输入"
 					 placeholder-class="placeholder" />
 					</view>
 			</view>
 			<view class="item">
-				<view class="flex ll">
+				<view class="d-flex a-center ll">
 					<view class="icon"><image src="../../static/images/resumel-icon8.png" mode=""></image></view>
 					<view>上传照片</view>
 				</view>
-				<view class="pdt10 upLoadBtn" @click="upLoadImg('mainImg')" v-if="submitData.mainImg.length==0">
+				<view class="pt-2 upLoadBtn" @click="upLoadImg('mainImg')" v-if="submitData.mainImg.length==0">
 					<image src="../../static/images/resumel-icon14.png" mode=""></image>
 				</view>
-				<view class="pdt10 upImg flex" v-if="submitData.mainImg.length>0">
+				<view class="pt-2 upImg d-flex a-center" v-if="submitData.mainImg.length>0">
 					<view class="lis"><image :src="submitData.mainImg&&submitData.mainImg[0]?submitData.mainImg[0].url:''" mode=""></image></view>
 				</view>
 			</view>

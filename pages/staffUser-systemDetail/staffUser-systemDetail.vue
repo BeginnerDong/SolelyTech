@@ -1,7 +1,7 @@
 <template>
 	<view>
 		
-		<view class="xqInfor fs13  pdlr4 whiteBj">
+		<view class="xqInfor font-26 px-2 bg-white">
 			<view class="content ql-editor" style="padding:0;"
 			v-html="mainData.content">
 			</view>

@@ -1,18 +1,18 @@
 <template>
 	<view>
 		
-		<view class="leaveList mglr4  fs13">
-			<view class="item flexRowBetween" v-for="(item,index) in mainData"  :data-id="item.id"
+		<view class="leaveList mx-2 font-26">
+			<view class="item d-flex a-center j-sb" v-for="(item,index) in mainData"  :data-id="item.id"
 			@click="Router.navigateTo({route:{path:'/pages/staffUser-leaveDetail/staffUser-leaveDetail?id='+$event.currentTarget.dataset.id}})">
 				<view class="infor" style="width: 75%">
 					<view>申请时间：{{item.create_time}}</view>
-					<view class="mgt10">请假事由：{{item.content}}</view>
+					<view class="mt-2">请假事由：{{item.content}}</view>
 				</view>
-				<view class="rr fs12" style="width:25%">
-					<view class="pubColor mgb5 flexEnd" v-if="item.num==0">状态：审核中</view>
-					<view class="pubColor mgb5 flexEnd" v-if="item.num==1">状态：已审核</view>
-					<view class="pubColor mgb5 flexEnd" v-if="item.num==2">状态：已拒绝</view>
-					<view class="flexEnd"><image class="arrowR" src="../../static/images/0-icon.png" mode=""></image></view>
+				<view class="rr font-24" style="width:25%">
+					<view class="main-text-color mb-2 d-flex a-center j-end" v-if="item.num==0">状态：审核中</view>
+					<view class="main-text-color mb-2 d-flex a-center j-end" v-if="item.num==1">状态：已审核</view>
+					<view class="main-text-color mb-2 d-flex a-center j-end" v-if="item.num==2">状态：已拒绝</view>
+					<view class="d-flex a-center j-end"><image class="arrowR" src="../../static/images/0-icon.png" mode=""></image></view>
 				</view>
 			</view>
 		</view>

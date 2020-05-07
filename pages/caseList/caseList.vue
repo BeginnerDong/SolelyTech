@@ -1,40 +1,40 @@
 <template>
 	<view>
 		
-		<view class="pdlr4">
-			<view class="flex menuTit pdtb20 fs13" @click="categoryShow()">
+		<view class="px-2">
+			<view class="menuTit d-flex a-center py-4 font-26 " @click="categoryShow()">
 				<image src="../../static/images/casel-icon.png" style="width: 36rpx;height: 30rpx;margin-right: 10rpx;" mode=""></image>
 				{{labelData[curr-1].title}}-{{titleTwo}}
 			</view>
 			
 			<view class="black-bj" style="top: 0rpx;" v-show="is_show"></view>
 			<view class="categoryBox" v-show="is_categoryShow">
-				<view class="pdt20 fs14 ftw">类型</view>
-				<view class="typeNav flex fs13 pdt10 borderB1">
+				<view class="pt-4 font-28 font-weight">类型</view>
+				<view class="typeNav d-flex a-center font-26 pt-2 border-bottom">
 					<view class="tt" :class="curr==1+index?'on':''"  @click="currChange(index+1)" v-for="(item,index) in typeData" :key="index">{{item}}</view>
 				</view>
-				<view class="pdt20 fs14 ftw">行业</view>
-				<view class="industryNav flex fs13 pdt5 color6">
+				<view class="pt-4 font-28 font-weight">行业</view>
+				<view class="industryNav d-flex a-center font-26 pt-1 color6">
 					<view  class="tt" :class="idTwo==-1?'on':''"
 					@click="classChange(-1,'全部')">全部</view>
 					<view class="tt" :class="idTwo==item.id?'on':''" @click="classChange(item.id,item.title)" 
 					v-for="(item,index) in labelTwoData" :key="index">{{item.title}}</view>
 				</view>
 				
-				<view class="pdtb25 flexCenter">
+				<view class="pdtb25 py-5 d-flex a-center j-center">
 					<view style="width: 36rpx;height: 36rpx;" @click="categoryShow()"><image src="../../static/images/casel-icon1.png" mode=""></image></view>
 				</view>
 			</view>
 			
-			<!-- <view class="flexRowBetween caseList">
+			<!-- <view class="d-flex a-center j-sb caseList">
 				<view class="item radius10 pr boxShaow" v-for="(item,index) in mainData" :key="index"  :data-url="item.passage1"
 				@click="Router.navigateTo({route:{path:'/pages/caseDetail/caseDetail?url='+$event.currentTarget.dataset.url}})">
 					<view class="pic"><image :src="item.mainImg&&item.mainImg[0]?item.mainImg[0].url:''" mode=""></image></view>
 					<view class="tit fs13">{{item.title}}</view>
 				</view>
 			</view> -->
-			<view class="flexRowBetween caseList">
-				<view class="item radius10 pr boxShaow" v-for="(item,index) in mainData" :key="index"  :data-url="item.passage1">
+			<view class="d-flex a-center j-sb caseList">
+				<view class="item rounded10 position-relative shadow" v-for="(item,index) in mainData" :key="index"  :data-url="item.passage1">
 					<view class="pic"><image :src="item.mainImg&&item.mainImg[0]?item.mainImg[0].url:''" mode=""></image></view>
 					<view class="tit fs13">{{item.title}}</view>
 				</view>
