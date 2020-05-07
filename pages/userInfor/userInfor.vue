@@ -11,7 +11,7 @@
 			<view class="item flexRowBetween">
 				<view class="ll">联系电话</view>
 				<view class="rr">
-					<input type="text" maxlength="11" v-model="submitData.phone" placeholder="请输入" placeholder-class="placeholder" />
+					<input type="number" maxlength="11" v-model="submitData.phone" placeholder="请输入" placeholder-class="placeholder" />
 				</view>
 			</view>
 			<view class="item flexRowBetween">
