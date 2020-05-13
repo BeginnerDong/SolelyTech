@@ -57,7 +57,7 @@
 				};
 				postData.data = {};
 				postData.data = self.$Utils.cloneForm(self.submitData);
-				postData.data.start_time = Date.parse(new Date())/1000;
+				postData.data.start_time = Date.parse(new Date());
 				const callback = (data) => {				
 					if (data.solely_code == 100000) {					
 						self.$Utils.showToast('添加成功', 'none', 1000)

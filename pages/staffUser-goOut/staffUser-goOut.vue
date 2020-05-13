@@ -4,16 +4,17 @@
 		<view class="goOut mx-2">
 			<view class="item d-flex a-center j-sb" v-for="(item,index) in mainData" :key="index">
 				<view class="fixIcon"><image :src="item.behavior==1?'../../static/images/to-go-outl-img1.png':'../../static/images/to-go-outl-img.png'" mode=""></image></view>
-				<view class="infor" @click="Router.navigateTo({route:{path:'/pages/staffUser-goOutDetail/staffUser-goOutDetail?id='+$event.currentTarget.dataset.id}})">
+				<view class="infor" :data-id="item.id" @click="Router.navigateTo({route:{path:'/pages/staffUser-goOutDetail/staffUser-goOutDetail?id='+$event.currentTarget.dataset.id}})">
 					<view class="d-flex a-center row"><span class="title">缘由：</span>{{item.content}}</view>
-					<view class="d-flex a-center row"><span class="title">起始时间：</span>{{item.start_time>0?Utils.timeto(item.start_time*1000,'ymd-hms'):'-------'}}</view>
-					<view class="d-flex a-center row"><span class="title">到达时间：</span>{{item.arrive_time>0?Utils.timeto(item.arrive_time*1000,'ymd-hms'):'-------'}}</view>
-					<view class="d-flex a-center row"><span class="title">返程时间：</span>{{item.back_time>0?Utils.timeto(item.back_time*1000,'ymd-hms'):'-------'}}</view>
-					<view class="d-flex a-center row"><span class="title">结束时间：</span>{{item.end_time>0?Utils.timeto(item.end_time*1000,'ymd-hms'):'-------'}}</view>
+					<view class="d-flex a-center row"><span class="title">起始时间：</span>{{item.start_time>0?Utils.timeto(item.start_time,'ymd-hms'):'-------'}}</view>
+					<!-- <view class="d-flex a-center row"><span class="title">到达时间：</span>{{item.arrive_time>0?Utils.timeto(item.arrive_time,'ymd-hms'):'-------'}}</view> -->
+					<view class="d-flex a-center row"><span class="title">返程时间：</span>{{item.back_time>0?Utils.timeto(item.back_time,'ymd-hms'):'-------'}}</view>
+					<view class="d-flex a-center row"><span class="title">结束时间：</span>{{item.end_time>0?Utils.timeto(item.end_time,'ymd-hms'):'-------'}}</view>
 				</view>
-				<view class="arriveBtn font-32 font-weight" v-if="item.start_time>0&&item.arrive_time==0" :data-id="item.id" @click="Router.navigateTo({route:{path:'/pages/staffUser-goOut-Arrive/staffUser-goOut-Arrive?id='+$event.currentTarget.dataset.id}})">到达</view>
-				<view class="arriveBtn font-32 font-weight" v-if="item.arrive_time>0&&item.back_time==0" @click="getLocation('back',index)">返程</view>
-				<view class="arriveBtn font-32 font-weight" v-if="item.back_time>0&&item.type!=3" @click="getLocation('end',index)">结束</view>
+				<view class="arriveBtn font-32 font-weight" v-if="item.log&&item.log[0]&&item.log[0].behavior==1" :data-id="item.id" @click="Router.navigateTo({route:{path:'/pages/staffUser-goOut-Arrive/staffUser-goOut-Arrive?id='+$event.currentTarget.dataset.id}})">到达</view>
+				<view class="arriveBtn font-32 font-weight" v-if="item.log&&item.log[0]&&item.log[0].behavior==2" @click="getLocation('back',index)">返程</view>
+				<view class="arriveBtn font-32 font-weight" v-if="item.log&&item.log[0]&&item.log[0].behavior==3" @click="getLocation('end',index)">结束</view>
+				<view class="arriveBtn font-32 font-weight" v-if="item.log&&item.log[0]&&item.log[0].behavior==2" @click="getLocation('start',index)">再次出发</view>
 			</view>
 			
 		</view>
@@ -81,9 +82,11 @@
 					longitude:self.longitude
 				};
 				if(type=='back'){
-					postData.data.back_time = Date.parse(new Date())/1000;
+					postData.data.back_time = Date.parse(new Date());
 				}else if(type=='end'){
-					postData.data.end_time = Date.parse(new Date())/1000;
+					postData.data.end_time = Date.parse(new Date());
+				}else if(type=='start'){
+					postData.data.start_time = Date.parse(new Date());
 				};
 				const callback = (data) => {				
 					if (data.solely_code == 100000) {					
@@ -116,6 +119,18 @@
 				postData.searchItem = {
 					thirdapp_id: 22,
 					type:3
+				};
+				postData.getAfter = {
+					log:{
+						tableName:'Log',
+						middleKey:'id',
+						key:'relation_id',
+						condition:'=',
+						searchItem:{
+							status:1,
+							relation_table:'Routine'
+						},
+					}
 				};
 				const callback = (res) => {
 					if (res.info.data.length > 0) {

@@ -79,7 +79,7 @@
 				};
 				postData.data = {};
 				postData.data = self.$Utils.cloneForm(self.submitData);
-				postData.data.arrive_time = Date.parse(new Date())/1000;
+				postData.data.arrive_time = Date.parse(new Date());
 				postData.data.latitude = self.latitude;
 				postData.data.longitude = self.longitude;
 				const callback = (data) => {				
