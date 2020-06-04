@@ -11,6 +11,8 @@ import $RoutesConfig from './config/routes.config.js'
 import $ConstDataConfig from './config/constData.config.js'
 import $modalHelper from './common/modalHelper.js'
 
+import $Swiper from './common/swiper.min.js'
+
 //var jweixin = require('jweixin-module')
 
 
@@ -21,6 +23,7 @@ Vue.prototype.$AssetsConfig = $AssetsConfig
 Vue.prototype.$Config = $Config
 Vue.prototype.$Router = $Router
 Vue.prototype.$Token = $Token
+
 //Vue.prototype.$jweixin = jweixin
 Vue.config.productionTip = false
 

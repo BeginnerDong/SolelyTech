@@ -14,7 +14,7 @@
 					<input type="number" maxlength="11" v-model="submitData.phone" placeholder="请输入" placeholder-class="placeholder" />
 				</view>
 			</view>
-			<view class="item d-flex a-center j-sb">
+			<view class="item d-flex a-center j-sb" v-show="submitData.phone != phone">
 				<view class="ll">验证码</view>
 				<view class="rr d-flex a-center j-end">
 					<view style="width: 50%;"><input type="text" value="" placeholder="请输入" placeholder-class="placeholder" /></view>
@@ -51,7 +51,8 @@
 				submitData:{
 					name:'',
 					phone:''
-				}
+				},
+				phone:''
 			}
 		},
 		
@@ -100,6 +101,8 @@
 						self.mainData = res.info.data[0];
 						self.submitData.phone = self.mainData.phone;
 						self.submitData.name = self.mainData.name;
+						
+						self.phone = self.mainData.phone;
 					}
 					console.log('self.mainData', self.mainData)
 					self.$Utils.finishFunc('getMainData');

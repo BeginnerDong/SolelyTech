@@ -59,7 +59,7 @@
 		onLoad(options) {
 			const self = this;
 			self.paginate = self.$Utils.cloneForm(self.$AssetsConfig.paginate);
-			self.$Utils.loadAll(['getMainData'], self);	
+			self.$Utils.loadAll(['getMainData'], self);
 		},
 		
 		onReachBottom() {
@@ -125,7 +125,7 @@
 	.newsList{flex-wrap: wrap;align-items: flex-start;}
 	.newsList .item{width: 340rpx;height: 280rpx;margin-bottom:30rpx;background: #fff;overflow: hidden;}
 	.newsList .item .pic{width: 100%;height: 220rpx;}
-	.newsList .item .tit{padding: 20rpx 4% 0 4%;text-align: center;}
+	.newsList .item .tit{padding: 20rpx 4% 0 4%;text-align: center;width: 188px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 	
 	
 </style>

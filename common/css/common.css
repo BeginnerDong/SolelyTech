@@ -54,6 +54,7 @@ body{
 .w-50{ width: 50%;}
 .h-100{ height: 1250rpx;}
 .h-50{ width: 625rpx; }
+.h100{height: 100%;}
 /* 字体 */
 
 .font-16{font-size: 16rpx;}

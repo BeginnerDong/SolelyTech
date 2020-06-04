@@ -15,6 +15,10 @@
 
 <style>
 	/* @import "/assets/style/style.css"; */
+	/* 动画样式 */
+	@import "/common/css/animate.css";
+	@import "/common/css/swiper.min.css";
+	
 	@import "/assets/style/quill.css";
 	/* 公共样式 */
 	@import "/common/css/common.css";

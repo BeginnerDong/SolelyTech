@@ -14,8 +14,8 @@
 						<view class="tt">{{item.description}}</view>
 					</view>
 					<view class="d-flex a-center mt-3 font-24 color9">
-						<view class="photo"><image src="../../static/images/positionl-img.png" mode=""></image></view>
-						<view>纯粹科技</view>
+						<view class="photo"><image src="../../static/images/logo.png" mode=""></image></view>
+						<view>纯粹科技/人事部</view>
 					</view>
 				</view>
 			</view>
