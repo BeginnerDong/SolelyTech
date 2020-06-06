@@ -120,7 +120,16 @@
 				Router:this.$Router,
 				animationData: {},
 				animationData2: {},
-				index: 0
+				index: 0,
+				bannerData:[{
+					imgOne:'',
+					imgTwo:'',
+					animation:{}
+				},{
+					imgOne:'',
+					imgTwo:'',
+					animation:{}
+				}]
 			}
 		},
 		
@@ -145,17 +154,19 @@
 				const { windowWidth } = uni.getSystemInfoSync();
 				var x = 0,y = 0;
 				if(windowWidth <= 320){x = 280,y = 100}else if(windowWidth <= 375){x = 330,y = 105}else if(windowWidth <=414){x = 350,y = 115}else if(windowWidth == 480){x = 420,y = 150}else if(windowWidth <= 768){x = 670,y = 238}else if(windowWidth <= 834){x = 700,y = 238}else if(windowWidth <= 1024){x = 900,y = 300}
-		    self.animation.translateX(x).opacity(1).step({duration:500})
-			  self.animationData = self.animation.export()
-			  self.animation.translateX(-y).opacity(1).step({duration:500})
-		    self.animationData2 = self.animation.export()   // export方法导出动画数据
+		    
+				this.animation.translateX(-x).opacity(0).step({duration:100})
+				this.animationData = this.animation.export()
+				this.animation.translateX(y).opacity(0).step({duration:100})
+				this.animationData2 = this.animation.export();
 				
 				setTimeout(()=>{
-				  this.animation.translateX(-x).opacity(0).step({duration:100})
-				  this.animationData = this.animation.export()
-					this.animation.translateX(y).opacity(0).step({duration:100})
-				  this.animationData2 = this.animation.export()
-				}, 3900);
+					self.animation.translateX(x).opacity(1).step({duration:500})
+					self.animationData = self.animation.export()
+					self.animation.translateX(-y).opacity(1).step({duration:500})
+					self.animationData2 = self.animation.export()   // export方法导出动画数据
+				}, 100);
+				
 		  },
 			current(e){
 				const self = this;
