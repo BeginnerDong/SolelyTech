@@ -45,6 +45,12 @@
 					<view>投递简历</view>
 				</view>
 			</view>
+			<view class="item d-flex a-center j-center" @click="Router.navigateTo({route:{path:'/pages/pay/pay'}})">
+				<view>
+					<view class="icon"><image src="../../static/images/employeesl-icon4.png" mode=""></image></view>
+					<view>付款</view>
+				</view>
+			</view>
 		</view>
 		
 		

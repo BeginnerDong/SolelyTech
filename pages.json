@@ -71,6 +71,13 @@
 			}
 		},
 		{
+			"path": "pages/pay/pay",
+			"style": {
+				"navigationBarTitleText": "付款",
+				"onReachBottomDistance":100
+			}
+		},
+		{
 			"path": "pages/sendResumes/sendResumes",
 			"style": {
 				"navigationBarTitleText": "投递简历",
