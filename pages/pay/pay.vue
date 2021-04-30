@@ -30,7 +30,24 @@
 			const self = this;
 			//self.$Utils.loadAll(['getMainData'], self);
 		},
-		
+		onShareAppMessage(ops) {
+			console.log(ops)
+			const self = this;
+			self.is_show = false;
+			if (ops.from === 'button') {
+				return {
+					title:'纯粹科技',
+					path: '/pages/pay/pay', //点击分享的图片进到哪一个页面
+					//imageUrl:'../../static/images/posters-img1.jpg',
+				}
+			}else{
+				return {
+					title:'纯粹科技',
+					path: '/pages/pay/pay', //点击分享的图片进到哪一个页面
+					//imageUrl:'../../static/images/posters-img1.jpg',
+				}
+			}
+		},
 		methods: {
 			
 			submit() {
